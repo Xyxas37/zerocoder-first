@@ -26,4 +26,9 @@ class Warrior():
         print(f"сила воина - {self.power}")
         print(f"выносливость воина - {self.endurance}")
 
+war1 = Warrior(name: "Степа", )
 
+print(war1.name)
+print(war1.power)
+print(war1.endurance)
+print(war1.hair_color)
