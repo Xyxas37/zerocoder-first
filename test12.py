@@ -23,7 +23,7 @@ class User:
 class Admin(User):
     def __init__(self, user_id, name):
         super().__init__(user_id, name)
-        self._User__acces = 'admin'  # Доступ через изменение защищённого атрибута базового класса
+        self._User__acces = 'admin' 
 
     def add_user(self, user_list, user):
         if user not in user_list:
@@ -59,4 +59,4 @@ admin.add_user(users, user3)
 admin.add_user(users, user4)
 
 admin.remove_user(users, user3)
-admin.remove_user(users, user3)  # Попытка удалить уже удалённого пользователя
+admin.remove_user(users, user3)
