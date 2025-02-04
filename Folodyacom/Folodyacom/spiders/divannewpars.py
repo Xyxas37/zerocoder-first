@@ -7,12 +7,12 @@ class DivannewparsSpider(scrapy.Spider):
 
 
     def parse(self, response):
-        # Проверяем структуру HTML и корректируем селекторы
-        svets = response.css("div.LlPhw")  # Подберите актуальный класс
+
+        svets = response.css("div.LlPhw")
 
         for svet in svets:
             yield {
-                "name" : svet.css("div.lsooF::text").get(),  # Корректный селектор названия
-                "price" : svet.css("div.ui-LD-ZU KIkOH::text").get(),  # Добавляем цену
-                "url" : svet.css("a").attrib["href"]  # Добавляем ссылку на товар
+                "name" : svet.css("div.lsooF::text").get(),
+                "price" : svet.css("div.ui-LD-ZU KIkOH::text").get(),
+                "url" : svet.css("a").attrib["href"]
             }
