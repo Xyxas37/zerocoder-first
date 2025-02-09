@@ -1,34 +1,11 @@
-class Warrior():
-    def __init__(self, name, power, endurance, hair_color):
-        self.name = name
-        self.power = power
-        self.endurance = endurance
-        self.hair_color = hair_color
+import pandas as pd
 
-    def sleep(self):
-        print(f"{self.name} лег спать")
-        self.endurance += 2
+data = {
+    'Name': ['Alice', 'Bob', 'Roma', 'Anna'],
+    'Age': [23, 45, 17, 24],
+    'City': ['New York', 'LA', 'Chicago', 'Moscow']
+}
+df = pd.DataFrame(data)
+print(df)
 
-    def eat(self):
-        print(f"{self.name} сел кушать")
-        self.power = + 1
-
-    def hit(self):
-        print(f"{self.name} бьет кого-то")
-        self.endurance = - 6
-
-    def walk(self):
-        print(f"{self.name} гуляет")
-
-    def info(self):
-        print(f"имя воина - {self.name}")
-        print(f"цвет волос воина - {self.hair_color}")
-        print(f"сила воина - {self.power}")
-        print(f"выносливость воина - {self.endurance}")
-
-war1 = Warrior(name: "Степа", )
-
-print(war1.name)
-print(war1.power)
-print(war1.endurance)
-print(war1.hair_color)
+df.to_csv('BBR.csv', index=False)
