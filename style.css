@@ -1,0 +1,30 @@
+p {
+    #background-color: royalblue;
+    font-size: 12px;
+        font-family: [tahoma];
+        font-weight: [300];
+}
+
+
+.card{
+   width: 400px;
+   height: 650px;
+   background-color: Beige;
+   border-radius: 60px;
+}
+
+.photo {
+   height: 40%;
+   padding: 40px;
+   # padding - это внутренний отступ
+   # Для внешних отступов используется margin
+}
+.info {
+   padding: 20px;
+   height: 40%;
+}
+img {
+   position: relative;
+   left:17%;
+   border-radius: 20px;
+}
